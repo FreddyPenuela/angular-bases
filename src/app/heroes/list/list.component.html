@@ -1,0 +1,23 @@
+
+<h1>lista de personajes </h1>
+
+<div *ngIf="heroeborrado; else tumama">
+    <h3>personajes quitados<small class="text-danger">{{ heroeborrado }}</small></h3>
+</div>
+
+
+<ng-template #tumama>
+    <h4>no se ha quitado ningun personaje</h4>
+</ng-template>
+
+
+<ul class="mt-2 list-group">
+    <li *ngFor="let nombre of soylista" class="list-group-item">{{ nombre }}</li>
+</ul>
+
+<button *ngIf="soylista.length >0"
+(click)="removerHeroe()"
+class="btn btn-primary">
+quitar  ultimo personaje
+</button>
+

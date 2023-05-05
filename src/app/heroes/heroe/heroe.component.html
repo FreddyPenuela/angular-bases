@@ -1,0 +1,43 @@
+<h1>{{ nombre }}</h1>
+
+<dl>
+    <td>Nmobre:</td>
+    <dd>{{ nombre }}</dd>
+    
+    <td>Edad:</td>
+    <dd>{{ edad }}</dd>
+    
+    <td>Método:</td>
+    <dd> {{ getfusionar() }}</dd>
+    
+    <td>Capitalizado:</td>
+    <dd>{{ capitallizedName }}</dd>
+
+</dl>
+
+<button 
+    *ngIf="nombre !== 'Spiderman'"
+    class="btn btn-primary" 
+    (click)="getcambiarNombre()"> 
+    cambiar nombre 
+</button>
+
+<button
+*ngIf="edad !== 25"
+class="btn btn-primary" 
+(click)="getcambiarEdad()"> 
+cambiar edad 
+</button>
+
+<button
+class="btn btn-primary" 
+(click)="reset()"> 
+reiniciar 
+</button>
+
+
+
+
+
+
+

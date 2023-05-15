@@ -1,0 +1,19 @@
+
+<h3>listado</h3>
+
+<ul ngf class="list-group d-flex justify-content-between ">
+
+
+    <li *ngFor="let characters of characterlist; let i = index"
+        class="list-group-item">
+
+        <div>
+            <span class="text-danger">{{ i + 1 }}</span>
+            {{ characters.nombre }} - poder: {{ characters.poder }}
+            <button class="btn btn-success" (click)="DeleteCharacterById(characters.id)">x</button>
+        </div>
+
+
+    </li>
+
+</ul>
